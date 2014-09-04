@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  CoreImageVideoTestbed
 //
 //  Created by Joshua Sullivan on 8/24/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RootViewController : UIViewController
 
 
 @end

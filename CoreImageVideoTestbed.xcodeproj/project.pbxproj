@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49EA51AB17DA4AA8B004A079 /* Settings.bundle */; };
+		4BA90710ED695749959F94B5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA90AC4CB100CAC0E560C8D /* RootViewController.m */; };
 		BC27E68419AAC3E100C7FF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68319AAC3E100C7FF64 /* main.m */; };
 		BC27E68719AAC3E100C7FF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68619AAC3E100C7FF64 /* AppDelegate.m */; };
-		BC27E68A19AAC3E100C7FF64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68919AAC3E100C7FF64 /* ViewController.m */; };
 		BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68B19AAC3E100C7FF64 /* Main.storyboard */; };
 		BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68E19AAC3E100C7FF64 /* Images.xcassets */; };
 		BC27E69B19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E69A19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m */; };
+		BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */; };
+		BC27E6A919AACCE800C7FF64 /* FilterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A819AACCE800C7FF64 /* FilterDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,18 +29,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49EA51AB17DA4AA8B004A079 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4BA906382A63E1400B671BAE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		4BA90AC4CB100CAC0E560C8D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageVideoTestbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC27E68219AAC3E100C7FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC27E68319AAC3E100C7FF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC27E68519AAC3E100C7FF64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC27E68619AAC3E100C7FF64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BC27E68819AAC3E100C7FF64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BC27E68919AAC3E100C7FF64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BC27E68C19AAC3E100C7FF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC27E68E19AAC3E100C7FF64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC27E69419AAC3E100C7FF64 /* CoreImageVideoTestbedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageVideoTestbedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC27E69919AAC3E100C7FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC27E69A19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageVideoTestbedTests.m; sourceTree = "<group>"; };
+		BC27E6A419AACCD700C7FF64 /* FilterStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterStackViewController.h; sourceTree = "<group>"; };
+		BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterStackViewController.m; sourceTree = "<group>"; };
+		BC27E6A719AACCE800C7FF64 /* FilterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterDetailViewController.h; sourceTree = "<group>"; };
+		BC27E6A819AACCE800C7FF64 /* FilterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		267C9256F85F4C32BE9B89D6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		2B1E5E9F543140FB8617CB0D /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		3BE301DCCC7349999E702208 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5347EE69C3304FD89930559E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DCBC47FC38B4289931036BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BA906382A63E1400B671BAE /* RootViewController.h */,
+				4BA90AC4CB100CAC0E560C8D /* RootViewController.m */,
+				BC27E6A419AACCD700C7FF64 /* FilterStackViewController.h */,
+				BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */,
+				BC27E6A719AACCE800C7FF64 /* FilterDetailViewController.h */,
+				BC27E6A819AACCE800C7FF64 /* FilterDetailViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7384480B289B45ECB9AECD26 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		83A7FFD41980448285B355F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8F91A76BAD6A4A749D06E42C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		AC7D4CB6D78440A5816B76BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3BE301DCCC7349999E702208 /* Fonts */,
+				7384480B289B45ECB9AECD26 /* Data */,
+				8F91A76BAD6A4A749D06E42C /* Images */,
+				49EA51AB17DA4AA8B004A079 /* Settings.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BC27E67519AAC3E100C7FF64 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +146,10 @@
 				BC27E69719AAC3E100C7FF64 /* CoreImageVideoTestbedTests */,
 				BC27E67F19AAC3E100C7FF64 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
 		};
 		BC27E67F19AAC3E100C7FF64 /* Products */ = {
 			isa = PBXGroup;
@@ -81,11 +165,17 @@
 			children = (
 				BC27E68519AAC3E100C7FF64 /* AppDelegate.h */,
 				BC27E68619AAC3E100C7FF64 /* AppDelegate.m */,
-				BC27E68819AAC3E100C7FF64 /* ViewController.h */,
-				BC27E68919AAC3E100C7FF64 /* ViewController.m */,
 				BC27E68B19AAC3E100C7FF64 /* Main.storyboard */,
 				BC27E68E19AAC3E100C7FF64 /* Images.xcassets */,
 				BC27E68119AAC3E100C7FF64 /* Supporting Files */,
+				83A7FFD41980448285B355F4 /* Categories */,
+				2B1E5E9F543140FB8617CB0D /* ModelControllers */,
+				FA9C70FAD7B24B538FD75C44 /* Models */,
+				EA14A1908E674060BB851384 /* Theme */,
+				6DCBC47FC38B4289931036BC /* ViewControllers */,
+				5347EE69C3304FD89930559E /* Views */,
+				267C9256F85F4C32BE9B89D6 /* Vendor */,
+				AC7D4CB6D78440A5816B76BB /* Resources */,
 			);
 			path = CoreImageVideoTestbed;
 			sourceTree = "<group>";
@@ -116,6 +206,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA14A1908E674060BB851384 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		FA9C70FAD7B24B538FD75C44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +230,8 @@
 				BC27E67A19AAC3E100C7FF64 /* Sources */,
 				BC27E67B19AAC3E100C7FF64 /* Frameworks */,
 				BC27E67C19AAC3E100C7FF64 /* Resources */,
+				686D65CC5D7D43B48D814289 /* Warn for TODO and FIXME comments */,
+				1DA00F55966348A085FEB80D /* Update build number */,
 			);
 			buildRules = (
 			);
@@ -161,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Josh Sullivan";
+				ORGANIZATIONNAME = "Joshua Sullivan";
 				TargetAttributes = {
 					BC27E67D19AAC3E100C7FF64 = {
 						CreatedOnToolsVersion = 6.0;
@@ -198,6 +304,7 @@
 			files = (
 				BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */,
 				BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */,
+				44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,14 +317,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DA00F55966348A085FEB80D /* Update build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update build number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"${TARGET_BUILD_DIR}\"\nbuildPlist=\"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\n\n# Increment the build number to match the git version\nsvnRevision=`git log --oneline | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $svnRevision\" \"$buildPlist\"\n\nbundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$buildPlist\")\nbundleShortVersionString=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$buildPlist\")\n\n# Update the Settings.bundle\nnewVersion=\"${bundleShortVersionString} (${bundleVersion})\"\n/usr/libexec/PlistBuddy \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/Settings.bundle/Root.plist -c \"set PreferenceSpecifiers:1:DefaultValue $newVersion\"\necho \"newVersion: ${newVersion}\"\n";
+		};
+		686D65CC5D7D43B48D814289 /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC27E67A19AAC3E100C7FF64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC27E68A19AAC3E100C7FF64 /* ViewController.m in Sources */,
+				BC27E6A919AACCE800C7FF64 /* FilterDetailViewController.m in Sources */,
 				BC27E68719AAC3E100C7FF64 /* AppDelegate.m in Sources */,
+				BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */,
 				BC27E68419AAC3E100C7FF64 /* main.m in Sources */,
+				4BA90710ED695749959F94B5 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +420,22 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -316,12 +466,22 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CoreImageVideoTestbed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CoreImageVideoTestbed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -404,6 +566,7 @@
 				BC27E6A019AAC3E100C7FF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC27E6A119AAC3E100C7FF64 /* Build configuration list for PBXNativeTarget "CoreImageVideoTestbedTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +575,7 @@
 				BC27E6A319AAC3E100C7FF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
