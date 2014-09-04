@@ -13,20 +13,9 @@
 		BC27E68719AAC3E100C7FF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68619AAC3E100C7FF64 /* AppDelegate.m */; };
 		BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68B19AAC3E100C7FF64 /* Main.storyboard */; };
 		BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68E19AAC3E100C7FF64 /* Images.xcassets */; };
-		BC27E69B19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E69A19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m */; };
 		BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */; };
 		BC27E6A919AACCE800C7FF64 /* FilterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A819AACCE800C7FF64 /* FilterDetailViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BC27E69519AAC3E100C7FF64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC27E67619AAC3E100C7FF64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC27E67D19AAC3E100C7FF64;
-			remoteInfo = CoreImageVideoTestbed;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		49EA51AB17DA4AA8B004A079 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -39,9 +28,6 @@
 		BC27E68619AAC3E100C7FF64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC27E68C19AAC3E100C7FF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC27E68E19AAC3E100C7FF64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BC27E69419AAC3E100C7FF64 /* CoreImageVideoTestbedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageVideoTestbedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC27E69919AAC3E100C7FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC27E69A19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageVideoTestbedTests.m; sourceTree = "<group>"; };
 		BC27E6A419AACCD700C7FF64 /* FilterStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterStackViewController.h; sourceTree = "<group>"; };
 		BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterStackViewController.m; sourceTree = "<group>"; };
 		BC27E6A719AACCE800C7FF64 /* FilterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterDetailViewController.h; sourceTree = "<group>"; };
@@ -50,13 +36,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC27E67B19AAC3E100C7FF64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC27E69119AAC3E100C7FF64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				BC27E68019AAC3E100C7FF64 /* CoreImageVideoTestbed */,
-				BC27E69719AAC3E100C7FF64 /* CoreImageVideoTestbedTests */,
 				BC27E67F19AAC3E100C7FF64 /* Products */,
 			);
 			indentWidth = 4;
@@ -155,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */,
-				BC27E69419AAC3E100C7FF64 /* CoreImageVideoTestbedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,23 +162,6 @@
 			children = (
 				BC27E68219AAC3E100C7FF64 /* Info.plist */,
 				BC27E68319AAC3E100C7FF64 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BC27E69719AAC3E100C7FF64 /* CoreImageVideoTestbedTests */ = {
-			isa = PBXGroup;
-			children = (
-				BC27E69A19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m */,
-				BC27E69819AAC3E100C7FF64 /* Supporting Files */,
-			);
-			path = CoreImageVideoTestbedTests;
-			sourceTree = "<group>";
-		};
-		BC27E69819AAC3E100C7FF64 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BC27E69919AAC3E100C7FF64 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,24 +202,6 @@
 			productReference = BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BC27E69319AAC3E100C7FF64 /* CoreImageVideoTestbedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC27E6A119AAC3E100C7FF64 /* Build configuration list for PBXNativeTarget "CoreImageVideoTestbedTests" */;
-			buildPhases = (
-				BC27E69019AAC3E100C7FF64 /* Sources */,
-				BC27E69119AAC3E100C7FF64 /* Frameworks */,
-				BC27E69219AAC3E100C7FF64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BC27E69619AAC3E100C7FF64 /* PBXTargetDependency */,
-			);
-			name = CoreImageVideoTestbedTests;
-			productName = CoreImageVideoTestbedTests;
-			productReference = BC27E69419AAC3E100C7FF64 /* CoreImageVideoTestbedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,10 +213,6 @@
 				TargetAttributes = {
 					BC27E67D19AAC3E100C7FF64 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					BC27E69319AAC3E100C7FF64 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = BC27E67D19AAC3E100C7FF64;
 					};
 				};
 			};
@@ -292,7 +230,6 @@
 			projectRoot = "";
 			targets = (
 				BC27E67D19AAC3E100C7FF64 /* CoreImageVideoTestbed */,
-				BC27E69319AAC3E100C7FF64 /* CoreImageVideoTestbedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,13 +242,6 @@
 				BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */,
 				BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */,
 				44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC27E69219AAC3E100C7FF64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,23 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC27E69019AAC3E100C7FF64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC27E69B19AAC3E100C7FF64 /* CoreImageVideoTestbedTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BC27E69619AAC3E100C7FF64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BC27E67D19AAC3E100C7FF64 /* CoreImageVideoTestbed */;
-			targetProxy = BC27E69519AAC3E100C7FF64 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC27E68B19AAC3E100C7FF64 /* Main.storyboard */ = {
@@ -515,40 +429,6 @@
 			};
 			name = Release;
 		};
-		BC27E6A219AAC3E100C7FF64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreImageVideoTestbedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreImageVideoTestbed.app/CoreImageVideoTestbed";
-			};
-			name = Debug;
-		};
-		BC27E6A319AAC3E100C7FF64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreImageVideoTestbedTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreImageVideoTestbed.app/CoreImageVideoTestbed";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,15 +446,6 @@
 			buildConfigurations = (
 				BC27E69F19AAC3E100C7FF64 /* Debug */,
 				BC27E6A019AAC3E100C7FF64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC27E6A119AAC3E100C7FF64 /* Build configuration list for PBXNativeTarget "CoreImageVideoTestbedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC27E6A219AAC3E100C7FF64 /* Debug */,
-				BC27E6A319AAC3E100C7FF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
