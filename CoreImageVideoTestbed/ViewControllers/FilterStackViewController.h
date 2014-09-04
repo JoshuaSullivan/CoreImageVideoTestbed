@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FilterStackViewController : UIViewController
+@interface FilterStackViewController : UITableViewController
 
 @end

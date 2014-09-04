@@ -17,6 +17,7 @@
 @property (strong, nonatomic) EAGLContext *eaglContext;
 @property (strong, nonatomic) CIContext *ciContext;
 @property (strong, nonatomic) GLKView *glkView;
+@property (assign, nonatomic) BOOL isRunning;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 
@@ -36,7 +37,19 @@
     self.glkView.backgroundColor = [UIColor redColor];
 //    self.glkView.delegate = self;
     [self.view insertSubview:self.glkView belowSubview:self.configButton];
-    [self.captureSession startRunning];
+    [self.captureSession performSelector:@selector(startRunning) withObject:nil afterDelay:0.25];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.isRunning = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    self.isRunning = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,6 +115,9 @@
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection
 {
+    if (!self.isRunning) {
+        return;
+    }
     CGRect frame = self.view.bounds;
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *videoFrame = [CIImage imageWithCVPixelBuffer:pixelBuffer];
