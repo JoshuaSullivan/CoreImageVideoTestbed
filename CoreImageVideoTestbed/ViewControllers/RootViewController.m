@@ -112,6 +112,15 @@
     [self.captureSession commitConfiguration];
 }
 
+- (CIImage *)addFilterStackToImage:(CIImage *)image
+{
+    CIFilter *pixellateFilter = [CIFilter filterWithName:@"CIPixellate"];
+    [pixellateFilter setValue:image forKey:kCIInputImageKey];
+    [pixellateFilter setValue:@(16) forKey:kCIInputScaleKey];
+    [pixellateFilter setValue:[CIVector vectorWithX:0.0f Y:0.0f] forKey:kCIInputCenterKey];
+    return pixellateFilter.outputImage;
+}
+
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
@@ -126,6 +135,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     CIImage *videoFrame = [CIImage imageWithCVPixelBuffer:pixelBuffer];
     CGAffineTransform rotation = CGAffineTransformMakeRotation(-M_PI_2);
     videoFrame = [videoFrame imageByApplyingTransform:rotation];
+    videoFrame = [self addFilterStackToImage:videoFrame];
     CGRect videoExtent = [videoFrame extent];
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(2.0f, 2.0f);
     frame = CGRectApplyAffineTransform(frame, scaleTransform);
