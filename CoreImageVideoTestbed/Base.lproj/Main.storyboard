@@ -3,6 +3,8 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -31,11 +33,52 @@
                                     <segue destination="9Ah-eC-wUH" kind="presentation" modalTransitionStyle="flipHorizontal" id="kgh-Vb-bfI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yk1-8s-Goq" userLabel="Stats Footer View" customClass="StatView">
+                                <rect key="frame" x="20" y="524" width="280" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min: 0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCf-Vk-ut2" userLabel="Min Label">
+                                        <rect key="frame" x="8" y="5" width="52" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg: 0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5g-zZ-vbH" userLabel="Avg Label">
+                                        <rect key="frame" x="112" y="5" width="53" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max: 0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwZ-3o-dqV" userLabel="Max Label">
+                                        <rect key="frame" x="216" y="5" width="56" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="q5g-zZ-vbH" secondAttribute="centerY" id="DEs-tE-GkV"/>
+                                    <constraint firstAttribute="centerX" secondItem="q5g-zZ-vbH" secondAttribute="leading" constant="28" id="E9F-rJ-Xy8"/>
+                                    <constraint firstAttribute="trailing" secondItem="rwZ-3o-dqV" secondAttribute="trailing" constant="8" id="EMv-Wx-g20"/>
+                                    <constraint firstAttribute="centerY" secondItem="HCf-Vk-ut2" secondAttribute="centerY" id="NRd-L5-KWk"/>
+                                    <constraint firstAttribute="centerY" secondItem="rwZ-3o-dqV" secondAttribute="centerY" id="ZU0-aA-lNh"/>
+                                    <constraint firstAttribute="height" constant="24" id="jcO-2d-Uep"/>
+                                    <constraint firstItem="HCf-Vk-ut2" firstAttribute="leading" secondItem="yk1-8s-Goq" secondAttribute="leading" constant="8" id="kNc-7X-uN1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="avgLabel" destination="q5g-zZ-vbH" id="X3E-AN-tuA"/>
+                                    <outlet property="maxLabel" destination="rwZ-3o-dqV" id="yUt-72-uAO"/>
+                                    <outlet property="minLabel" destination="HCf-Vk-ut2" id="xaI-Eh-Vt9"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yYz-KN-JIQ" secondAttribute="trailing" constant="20" symbolic="YES" id="2Rm-CI-OOz"/>
+                            <constraint firstItem="yk1-8s-Goq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="4cg-0x-E8u"/>
+                            <constraint firstAttribute="trailing" secondItem="yk1-8s-Goq" secondAttribute="trailing" constant="20" id="UrN-rg-3GL"/>
                             <constraint firstItem="yYz-KN-JIQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZvL-Cg-aWG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yk1-8s-Goq" secondAttribute="bottom" constant="20" id="vWv-DL-qqV"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -45,6 +88,7 @@
                     </simulatedScreenMetrics>
                     <connections>
                         <outlet property="configButton" destination="yYz-KN-JIQ" id="K2E-aJ-Ied"/>
+                        <outlet property="statView" destination="yk1-8s-Goq" id="YOW-AF-NgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

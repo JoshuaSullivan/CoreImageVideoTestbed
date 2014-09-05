@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "StatView.h"
+
 @import CoreImage;
 @import GLKit;
 @import AVFoundation;
@@ -17,6 +19,7 @@
 @property (strong, nonatomic) EAGLContext *eaglContext;
 @property (strong, nonatomic) CIContext *ciContext;
 @property (strong, nonatomic) GLKView *glkView;
+@property (weak, nonatomic) IBOutlet StatView *statView;
 @property (assign, nonatomic) BOOL isRunning;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
@@ -128,8 +131,10 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     frame = CGRectApplyAffineTransform(frame, scaleTransform);
     CFTimeInterval startTime = CACurrentMediaTime();
     [self.ciContext drawImage:videoFrame inRect:frame fromRect:videoExtent];
-    CFTimeInterval endTime = CACurrentMediaTime();
-    NSLog(@"Rendering complete in %0.2fms.", (endTime - startTime) * 1000.0);
+    CFTimeInterval completionTime = (CACurrentMediaTime() - startTime) * 1000.0;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.statView addTiming:completionTime];
+    });
     [self.glkView display];
 }
 
