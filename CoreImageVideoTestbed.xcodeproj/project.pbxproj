@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49EA51AB17DA4AA8B004A079 /* Settings.bundle */; };
 		4BA90710ED695749959F94B5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA90AC4CB100CAC0E560C8D /* RootViewController.m */; };
+		7B2192FB19BDFE9200EB0258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2192FA19BDFE9200EB0258 /* Main.storyboard */; };
 		9474C7E6816C378252936730 /* CIColorCubeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9474C92CC52C53ED263B5009 /* CIColorCubeDataManager.m */; };
 		BC27E68419AAC3E100C7FF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68319AAC3E100C7FF64 /* main.m */; };
 		BC27E68719AAC3E100C7FF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68619AAC3E100C7FF64 /* AppDelegate.m */; };
-		BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68B19AAC3E100C7FF64 /* Main.storyboard */; };
 		BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68E19AAC3E100C7FF64 /* Images.xcassets */; };
 		BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */; };
 		BC27E6A919AACCE800C7FF64 /* FilterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E6A819AACCE800C7FF64 /* FilterDetailViewController.m */; };
@@ -23,6 +23,7 @@
 		49EA51AB17DA4AA8B004A079 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4BA906382A63E1400B671BAE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4BA90AC4CB100CAC0E560C8D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7B2192FA19BDFE9200EB0258 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9474C92CC52C53ED263B5009 /* CIColorCubeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorCubeDataManager.m; sourceTree = "<group>"; };
 		9474C980133BF0289A3FC312 /* CIColorCubeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIColorCubeDataManager.h; sourceTree = "<group>"; };
 		BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageVideoTestbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +31,6 @@
 		BC27E68319AAC3E100C7FF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC27E68519AAC3E100C7FF64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC27E68619AAC3E100C7FF64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BC27E68C19AAC3E100C7FF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC27E68E19AAC3E100C7FF64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC27E6A419AACCD700C7FF64 /* FilterStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterStackViewController.h; sourceTree = "<group>"; };
 		BC27E6A519AACCD700C7FF64 /* FilterStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterStackViewController.m; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 			children = (
 				BC27E68519AAC3E100C7FF64 /* AppDelegate.h */,
 				BC27E68619AAC3E100C7FF64 /* AppDelegate.m */,
-				BC27E68B19AAC3E100C7FF64 /* Main.storyboard */,
+				7B2192FA19BDFE9200EB0258 /* Main.storyboard */,
 				BC27E68E19AAC3E100C7FF64 /* Images.xcassets */,
 				BC27E68119AAC3E100C7FF64 /* Supporting Files */,
 				83A7FFD41980448285B355F4 /* Categories */,
@@ -249,7 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */,
+				7B2192FB19BDFE9200EB0258 /* Main.storyboard in Resources */,
 				BC27E68F19AAC3E100C7FF64 /* Images.xcassets in Resources */,
 				44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */,
 			);
@@ -304,17 +304,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BC27E68B19AAC3E100C7FF64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC27E68C19AAC3E100C7FF64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC27E69C19AAC3E100C7FF64 /* Debug */ = {

@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "StatView.h"
+#import "CIColorCubeDataManager.h"
 
 @import CoreImage;
 @import GLKit;
@@ -21,6 +22,7 @@
 @property (strong, nonatomic) GLKView *glkView;
 @property (weak, nonatomic) IBOutlet StatView *statView;
 @property (assign, nonatomic) BOOL isRunning;
+@property (strong, nonatomic) NSData *colorCubeData;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 
@@ -40,6 +42,10 @@
     self.glkView.backgroundColor = [UIColor redColor];
 //    self.glkView.delegate = self;
     [self.view insertSubview:self.glkView belowSubview:self.configButton];
+
+    CIColorCubeDataManager *cubeDataManager = [CIColorCubeDataManager new];
+    self.colorCubeData = [cubeDataManager createColorCubeDataFromImage:[UIImage imageNamed:@"HighContrastRedFilterMap"]];
+
     [self.captureSession performSelector:@selector(startRunning) withObject:nil afterDelay:0.25];
 }
 
@@ -114,11 +120,14 @@
 
 - (CIImage *)addFilterStackToImage:(CIImage *)image
 {
-    CIFilter *pixellateFilter = [CIFilter filterWithName:@"CIPixellate"];
-    [pixellateFilter setValue:image forKey:kCIInputImageKey];
-    [pixellateFilter setValue:@(16) forKey:kCIInputScaleKey];
-    [pixellateFilter setValue:[CIVector vectorWithX:0.0f Y:0.0f] forKey:kCIInputCenterKey];
-    return pixellateFilter.outputImage;
+    static CIFilter *nightVisionFilter;
+    if (!nightVisionFilter) {
+        nightVisionFilter = [CIFilter filterWithName:@"CIColorCube"];
+        [nightVisionFilter setValue:self.colorCubeData forKey:@"inputCubeData"];
+        [nightVisionFilter setValue:@(64) forKey:@"inputCubeDimension"];
+    }
+    [nightVisionFilter setValue:image forKey:kCIInputImageKey];
+    return nightVisionFilter.outputImage;
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
@@ -161,7 +170,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
 - (IBAction)unwindToRootViewController:(UIStoryboardSegue *)segue
 {
-
+    //TODO: Update the rendering stack.
 }
 
 @end
