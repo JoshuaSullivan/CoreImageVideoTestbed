@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49EA51AB17DA4AA8B004A079 /* Settings.bundle */; };
 		4BA90710ED695749959F94B5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA90AC4CB100CAC0E560C8D /* RootViewController.m */; };
+		9474C7E6816C378252936730 /* CIColorCubeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9474C92CC52C53ED263B5009 /* CIColorCubeDataManager.m */; };
 		BC27E68419AAC3E100C7FF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68319AAC3E100C7FF64 /* main.m */; };
 		BC27E68719AAC3E100C7FF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68619AAC3E100C7FF64 /* AppDelegate.m */; };
 		BC27E68D19AAC3E100C7FF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC27E68B19AAC3E100C7FF64 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		49EA51AB17DA4AA8B004A079 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4BA906382A63E1400B671BAE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4BA90AC4CB100CAC0E560C8D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9474C92CC52C53ED263B5009 /* CIColorCubeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorCubeDataManager.m; sourceTree = "<group>"; };
+		9474C980133BF0289A3FC312 /* CIColorCubeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIColorCubeDataManager.h; sourceTree = "<group>"; };
 		BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageVideoTestbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC27E68219AAC3E100C7FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC27E68319AAC3E100C7FF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +61,8 @@
 		2B1E5E9F543140FB8617CB0D /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9474C92CC52C53ED263B5009 /* CIColorCubeDataManager.m */,
+				9474C980133BF0289A3FC312 /* CIColorCubeDataManager.h */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */,
 				BC27E68419AAC3E100C7FF64 /* main.m in Sources */,
 				4BA90710ED695749959F94B5 /* RootViewController.m in Sources */,
+				9474C7E6816C378252936730 /* CIColorCubeDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
