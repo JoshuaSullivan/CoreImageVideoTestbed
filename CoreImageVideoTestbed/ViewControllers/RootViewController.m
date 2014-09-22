@@ -9,7 +9,6 @@
 #import "RootViewController.h"
 #import "StatView.h"
 
-@import CoreImage;
 @import GLKit;
 @import AVFoundation;
 
@@ -21,6 +20,8 @@
 @property (strong, nonatomic) GLKView *glkView;
 @property (weak, nonatomic) IBOutlet StatView *statView;
 @property (assign, nonatomic) BOOL isRunning;
+
+@property (strong, nonatomic) CIFilter *filter;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 
@@ -41,6 +42,7 @@
 //    self.glkView.delegate = self;
     [self.view insertSubview:self.glkView belowSubview:self.configButton];
     [self.captureSession performSelector:@selector(startRunning) withObject:nil afterDelay:0.25];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -68,6 +70,13 @@
             kCIContextWorkingColorSpace : [NSNull null]
     };
     self.ciContext = [CIContext contextWithEAGLContext:self.eaglContext options:ciOptions];
+
+    self.filter = [CIFilter filterWithName:@"CIColorCube"];
+    NSString *dataFile = [[NSBundle mainBundle] pathForResource:@"colorCubeReference64" ofType:@"cqb"];
+    NSData *cubeData = [NSData dataWithContentsOfFile:dataFile];
+
+    [self.filter setValue:cubeData forKey:@"inputCubeData"];
+    [self.filter setValue:@64 forKey:@"inputCubeDimension"];
 }
 
 #pragma mark - AVCaptureSession Setup
@@ -104,7 +113,7 @@
 
     // Image capture for light detection
     AVCaptureVideoDataOutput *videoDataOutput = [AVCaptureVideoDataOutput new];
-//    videoDataOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : (kCVPixelFormatType_32BGRA)};
+    videoDataOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA)};
     [videoDataOutput setSampleBufferDelegate:self
                                        queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
     [self.captureSession addOutput:videoDataOutput];
@@ -114,11 +123,8 @@
 
 - (CIImage *)addFilterStackToImage:(CIImage *)image
 {
-    CIFilter *pixellateFilter = [CIFilter filterWithName:@"CIPixellate"];
-    [pixellateFilter setValue:image forKey:kCIInputImageKey];
-    [pixellateFilter setValue:@(16) forKey:kCIInputScaleKey];
-    [pixellateFilter setValue:[CIVector vectorWithX:0.0f Y:0.0f] forKey:kCIInputCenterKey];
-    return pixellateFilter.outputImage;
+    [self.filter setValue:image forKey:kCIInputImageKey];
+    return self.filter.outputImage;
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
@@ -133,10 +139,10 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     CGRect frame = self.view.bounds;
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *videoFrame = [CIImage imageWithCVPixelBuffer:pixelBuffer];
-    CGAffineTransform rotation = CGAffineTransformMakeRotation(-M_PI_2);
+    CGAffineTransform rotation = CGAffineTransformMakeRotation((CGFloat)-M_PI_2);
     videoFrame = [videoFrame imageByApplyingTransform:rotation];
-    videoFrame = [self addFilterStackToImage:videoFrame];
     CGRect videoExtent = [videoFrame extent];
+    videoFrame = [self addFilterStackToImage:videoFrame];
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(2.0f, 2.0f);
     frame = CGRectApplyAffineTransform(frame, scaleTransform);
     CFTimeInterval startTime = CACurrentMediaTime();
