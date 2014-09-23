@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44B8F0D2DA7640F0A655C17A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49EA51AB17DA4AA8B004A079 /* Settings.bundle */; };
+		4BA9008F9922B9221FE73987 /* NRDColorCubeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA90D3BF0E23CFD041F3ABC /* NRDColorCubeHelper.m */; };
 		4BA90382EA058EB931936816 /* colorCubeReference64.cqb in Resources */ = {isa = PBXBuildFile; fileRef = 4BA90B258489DCC680F78497 /* colorCubeReference64.cqb */; };
 		4BA90710ED695749959F94B5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA90AC4CB100CAC0E560C8D /* RootViewController.m */; };
 		BC27E68419AAC3E100C7FF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E68319AAC3E100C7FF64 /* main.m */; };
@@ -21,9 +22,11 @@
 
 /* Begin PBXFileReference section */
 		49EA51AB17DA4AA8B004A079 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4BA906040DD71B7DA2F21C5F /* NRDColorCubeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDColorCubeHelper.h; sourceTree = "<group>"; };
 		4BA906382A63E1400B671BAE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4BA90AC4CB100CAC0E560C8D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4BA90B258489DCC680F78497 /* colorCubeReference64.cqb */ = {isa = PBXFileReference; lastKnownFileType = file.cqb; path = colorCubeReference64.cqb; sourceTree = "<group>"; };
+		4BA90D3BF0E23CFD041F3ABC /* NRDColorCubeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDColorCubeHelper.m; sourceTree = "<group>"; };
 		BC27E67E19AAC3E100C7FF64 /* CoreImageVideoTestbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageVideoTestbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC27E68219AAC3E100C7FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC27E68319AAC3E100C7FF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 		2B1E5E9F543140FB8617CB0D /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4BA90D3BF0E23CFD041F3ABC /* NRDColorCubeHelper.m */,
+				4BA906040DD71B7DA2F21C5F /* NRDColorCubeHelper.h */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				BC27E6A619AACCD700C7FF64 /* FilterStackViewController.m in Sources */,
 				BC27E68419AAC3E100C7FF64 /* main.m in Sources */,
 				4BA90710ED695749959F94B5 /* RootViewController.m in Sources */,
+				4BA9008F9922B9221FE73987 /* NRDColorCubeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
