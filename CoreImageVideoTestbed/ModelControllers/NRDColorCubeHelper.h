@@ -8,4 +8,7 @@
 
 @interface NRDColorCubeHelper : NSObject
 
++ (NSData *)createColorCubeDataForImage:(UIImage *)image cubeDimension:(size_t)cubeDimension;
+
 @end
+

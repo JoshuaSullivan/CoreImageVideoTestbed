@@ -16,6 +16,10 @@
 {
     CGSize imageSize = image.size;
     size_t dim = (size_t)imageSize.width;
+    if (dim * dim != cubeDimension * cubeDimension * cubeDimension) {
+        NSAssert(NO, @"ERROR: This image is the wrong size for a cube dimension of %lu.", cubeDimension);
+        return nil;
+    }
     size_t channels = 4;
     size_t componentSize = sizeof(uint8_t);
     size_t bytesPerRow = dim * channels * componentSize;
@@ -32,29 +36,19 @@
     float *floatBuffer = malloc(floatSize);
     size_t pixelCount = dim * dim;
     size_t cubeDimensionSquared = cubeDimension * cubeDimension;
-    size_t sqrtCubeDimension = (size_t)sqrt(cubeDimension);
-    size_t i, x, y, z, index, offset;
-
-//    for (size_t z = 0; z < cubeDimension; z++) {
-//        for (size_t y = 0; y < cubeDimension; y++) {
-//            for (size_t x = 0; x < cubeDimension; x++) {
-//                index = (z * cubeDimensionSquared) + (y * cubeDimension) + x;
-//                floatBuffer[offset + 0] = (float)imageBytes[index + 0] / 255.0f;
-//                floatBuffer[offset + 1] = (float)imageBytes[index + 1] / 255.0f;
-//                floatBuffer[offset + 2] = (float)imageBytes[index + 2] / 255.0f;
-//                floatBuffer[offset + 3] = (float)imageBytes[index + 3] / 255.0f;
-//                offset += channels;
-//            }
-//        }
-//    }
+    size_t gridSize = (size_t)sqrt(cubeDimension);
+    size_t i, x, y, z, gridOffsetX, gridOffsetY, index, offset;
 
     for (i = 0; i < pixelCount; i++) {
         x = i % cubeDimension;
         y = (i / cubeDimension) % cubeDimension;
         z = i / cubeDimensionSquared;
-        index = (z * cubeDimensionSquared) + (y * cubeDimension) + x;
+        gridOffsetX = z % gridSize;
+        gridOffsetY = z / gridSize;
+        index = (gridOffsetX * cubeDimension) + (gridOffsetY * cubeDimension * dim) + (y * dim) + x;
+        index *= channels;
         offset = i * channels;
-        NSLog(@"x: %lu, y: %lu, z:%lu, index:%lu, offset:%lu", x, y, z, index, offset);
+//        NSLog(@"x: %lu, y: %lu, z:%lu, index:%lu, offset:%lu", x, y, z, index, offset);
         floatBuffer[offset + 0] = (float)imageBytes[index + 0] / 255.0f;
         floatBuffer[offset + 1] = (float)imageBytes[index + 1] / 255.0f;
         floatBuffer[offset + 2] = (float)imageBytes[index + 2] / 255.0f;

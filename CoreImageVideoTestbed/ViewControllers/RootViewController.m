@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "StatView.h"
+#import "NRDColorCubeHelper.h"
 
 @import GLKit;
 @import AVFoundation;
@@ -72,9 +73,11 @@
     self.ciContext = [CIContext contextWithEAGLContext:self.eaglContext options:ciOptions];
 
     self.filter = [CIFilter filterWithName:@"CIColorCube"];
-    NSString *dataFile = [[NSBundle mainBundle] pathForResource:@"colorCubeReference64" ofType:@"cqb"];
-    NSData *cubeData = [NSData dataWithContentsOfFile:dataFile];
-
+    CFTimeInterval startTime = CACurrentMediaTime();
+    NSData *cubeData = [NRDColorCubeHelper createColorCubeDataForImage:[UIImage imageNamed:@"NightVisionColorCube64"]
+                                                         cubeDimension:64];
+    CFTimeInterval endTime = CACurrentMediaTime();
+    NSLog(@"Data creation took %0.2fms.", (endTime - startTime) * 1000.0);
     [self.filter setValue:cubeData forKey:@"inputCubeData"];
     [self.filter setValue:@64 forKey:@"inputCubeDimension"];
 }
