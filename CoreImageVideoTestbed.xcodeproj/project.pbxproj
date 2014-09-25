@@ -61,8 +61,8 @@
 		2B1E5E9F543140FB8617CB0D /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4BA90D3BF0E23CFD041F3ABC /* NRDColorCubeHelper.m */,
 				4BA906040DD71B7DA2F21C5F /* NRDColorCubeHelper.h */,
+				4BA90D3BF0E23CFD041F3ABC /* NRDColorCubeHelper.m */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
