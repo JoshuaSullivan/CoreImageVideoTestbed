@@ -3,6 +3,7 @@
 // Copyright (c) 2014 Joshua Sullivan. All rights reserved.
 //
 
+@import Accelerate;
 #import "NRDColorCubeHelper.h"
 
 @interface NRDColorCubeHelper ()
@@ -16,7 +17,8 @@
 {
     CGSize imageSize = image.size;
     size_t dim = (size_t)imageSize.width;
-    if (dim * dim != cubeDimension * cubeDimension * cubeDimension) {
+    size_t pixels = dim * dim;
+    if (pixels != cubeDimension * cubeDimension * cubeDimension) {
         NSAssert(NO, @"ERROR: This image is the wrong size for a cube dimension of %lu.", cubeDimension);
         return nil;
     }
@@ -34,29 +36,16 @@
 
     size_t floatSize = memSize * sizeof(float);
     float *floatBuffer = malloc(floatSize);
-    size_t pixelCount = dim * dim;
-    size_t cubeDimensionSquared = cubeDimension * cubeDimension;
-    size_t gridSize = (size_t)sqrt(cubeDimension);
-    size_t i, x, y, z, gridOffsetX, gridOffsetY, index, offset;
+    float *finalBuffer = malloc(floatSize);
+    float divisor = 255.0f;
 
-    for (i = 0; i < pixelCount; i++) {
-        x = i % cubeDimension;
-        y = (i / cubeDimension) % cubeDimension;
-        z = i / cubeDimensionSquared;
-        gridOffsetX = z % gridSize;
-        gridOffsetY = z / gridSize;
-        index = (gridOffsetX * cubeDimension) + (gridOffsetY * cubeDimension * dim) + (y * dim) + x;
-        index *= channels;
-        offset = i * channels;
-//        NSLog(@"x: %lu, y: %lu, z:%lu, index:%lu, offset:%lu", x, y, z, index, offset);
-        floatBuffer[offset + 0] = (float)imageBytes[index + 0] / 255.0f;
-        floatBuffer[offset + 1] = (float)imageBytes[index + 1] / 255.0f;
-        floatBuffer[offset + 2] = (float)imageBytes[index + 2] / 255.0f;
-        floatBuffer[offset + 3] = (float)imageBytes[index + 3] / 255.0f;
-    }
+    vDSP_vfltu8(imageBytes, 1, floatBuffer, 1, memSize);
+    vDSP_vsdiv(floatBuffer, 1, &divisor, finalBuffer, 1, memSize);
+
     free(imageBytes);
+    free(floatBuffer);
 
-    NSData *cubeData = [NSData dataWithBytesNoCopy:floatBuffer
+    NSData *cubeData = [NSData dataWithBytesNoCopy:finalBuffer
                                             length:floatSize
                                       freeWhenDone:YES];
 

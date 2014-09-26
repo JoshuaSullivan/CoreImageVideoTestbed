@@ -74,7 +74,7 @@
 
     self.filter = [CIFilter filterWithName:@"CIColorCube"];
     CFTimeInterval startTime = CACurrentMediaTime();
-    NSData *cubeData = [NRDColorCubeHelper createColorCubeDataForImage:[UIImage imageNamed:@"NightVisionColorCube64"]
+    NSData *cubeData = [NRDColorCubeHelper createColorCubeDataForImage:[UIImage imageNamed:@"colorCubeImage64"]
                                                          cubeDimension:64];
     CFTimeInterval endTime = CACurrentMediaTime();
     NSLog(@"Data creation took %0.2fms.", (endTime - startTime) * 1000.0);
@@ -116,7 +116,7 @@
 
     // Image capture for light detection
     AVCaptureVideoDataOutput *videoDataOutput = [AVCaptureVideoDataOutput new];
-    videoDataOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA)};
+    videoDataOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)};
     [videoDataOutput setSampleBufferDelegate:self
                                        queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
     [self.captureSession addOutput:videoDataOutput];
