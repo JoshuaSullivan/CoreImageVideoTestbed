@@ -74,7 +74,7 @@
 
     self.filter = [CIFilter filterWithName:@"CIColorCube"];
     CFTimeInterval startTime = CACurrentMediaTime();
-    NSData *cubeData = [NRDColorCubeHelper createColorCubeDataForImage:[UIImage imageNamed:@"colorCubeImage64"]
+    NSData *cubeData = [NRDColorCubeHelper createColorCubeDataForImage:[UIImage imageNamed:@"maximumContrastBW64"]
                                                          cubeDimension:64];
     CFTimeInterval endTime = CACurrentMediaTime();
     NSLog(@"Data creation took %0.2fms.", (endTime - startTime) * 1000.0);
