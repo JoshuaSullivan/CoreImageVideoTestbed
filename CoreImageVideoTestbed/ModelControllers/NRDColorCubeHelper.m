@@ -15,39 +15,49 @@
 
 + (NSData *)createColorCubeDataForImage:(UIImage *)image cubeDimension:(size_t)cubeDimension
 {
+    // Set up some variables for calculating memory size.
     CGSize imageSize = image.size;
     size_t dim = (size_t)imageSize.width;
     size_t pixels = dim * dim;
+    size_t channels = 4;
+
+    // If the number of pixels doesn't match what's needed for the supplied cube dimension, abort.
     if (pixels != cubeDimension * cubeDimension * cubeDimension) {
         NSAssert(NO, @"ERROR: This image is the wrong size for a cube dimension of %lu.", cubeDimension);
         return nil;
     }
-    size_t channels = 4;
-    size_t componentSize = sizeof(uint8_t);
-    size_t bytesPerRow = dim * channels * componentSize;
-    size_t memSize = bytesPerRow * dim;
-    uint8_t *imageBytes = malloc(memSize);
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
-    CGContextRef bitmapContext = CGBitmapContextCreate(imageBytes, dim, dim, componentSize * 8, bytesPerRow, colorSpace, bitmapInfo);
-    CGContextDrawImage(bitmapContext, CGRectMake(0.0f, 0.0f, dim, dim), image.CGImage);
-    CGContextRelease(bitmapContext);
-    CGColorSpaceRelease(colorSpace);
 
-    size_t floatSize = memSize * sizeof(float);
-    float *floatBuffer = malloc(floatSize);
+    // We don't need a sizeof() because uint_8t is explicitly 1 byte.
+    size_t memSize = pixels * channels;
+
+    // Get the UIImage's backing CGImageRef
+    CGImageRef img = image.CGImage;
+
+    // Get a reference to the CGImage's data provider.
+    CGDataProviderRef inProvider = CGImageGetDataProvider(img);
+
+    // Copy the data and get a pointer.
+    CFDataRef inBitmapData = CGDataProviderCopyData(inProvider);
+
+    const void *inBuffer = CFDataGetBytePtr(inBitmapData);
+
+    size_t floatSize = pixels * channels * sizeof(float);
     float *finalBuffer = malloc(floatSize);
     float divisor = 255.0f;
 
-    vDSP_vfltu8(imageBytes, 1, floatBuffer, 1, memSize);
-    vDSP_vsdiv(floatBuffer, 1, &divisor, finalBuffer, 1, memSize);
+    // Convert the uint_8t to float
+    vDSP_vfltu8(inBuffer, 1, finalBuffer, 1, memSize);
 
-    free(imageBytes);
-    free(floatBuffer);
+    // Divide each float by 255 to get the 0-1 range we are looking for.
+    vDSP_vsdiv(finalBuffer, 1, &divisor, finalBuffer, 1, memSize);
 
+    // Don't copy the bytes, just have the NSData take ownership of the buffer.
     NSData *cubeData = [NSData dataWithBytesNoCopy:finalBuffer
                                             length:floatSize
                                       freeWhenDone:YES];
+
+    // Release the copy of the bitmap data we created above.
+    CFRelease(inBitmapData);
 
     return cubeData;
 
