@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "StatView.h"
 #import "NRDColorCubeHelper.h"
+#import "CIEGaussianBlur.h"
 
 @import GLKit;
 @import AVFoundation;
@@ -23,6 +24,7 @@
 @property (assign, nonatomic) BOOL isRunning;
 
 @property (strong, nonatomic) CIFilter *filter;
+@property (strong, nonatomic) CIEGaussianBlur *gaussianBlur;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 
@@ -81,6 +83,10 @@
     NSLog(@"Data creation took %0.2fms.", (endTime - startTime) * 1000.0);
     [self.filter setValue:cubeData forKey:@"inputCubeData"];
     [self.filter setValue:@64 forKey:@"inputCubeDimension"];
+
+    self.gaussianBlur = [CIEGaussianBlur new];
+    self.gaussianBlur.inputRadius = @8.0f;
+    NSLog(@"%@", self.gaussianBlur);
 }
 
 #pragma mark - AVCaptureSession Setup
@@ -128,7 +134,8 @@
 - (CIImage *)addFilterStackToImage:(CIImage *)image
 {
     [self.filter setValue:image forKey:kCIInputImageKey];
-    return self.filter.outputImage;
+    self.gaussianBlur.inputImage = self.filter.outputImage;
+    return self.gaussianBlur.outputImage;
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
