@@ -12,7 +12,7 @@
 
 - (instancetype)init
 {
-    self = [CIFilter filterWithName:@"CIGaussianBlur"];
+    self = (CIEGaussianBlur *)[CIFilter filterWithName:@"CIGaussianBlur"];
     return self;
 }
 

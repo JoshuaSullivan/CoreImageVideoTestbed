@@ -12,7 +12,7 @@
 
 - (instancetype)init
 {
-    self = [CIFilter filterWithName:@"CIColorCube"];
+    self = (CIEColorCube *)[CIFilter filterWithName:@"CIColorCube"];
     return self;
 }
 
