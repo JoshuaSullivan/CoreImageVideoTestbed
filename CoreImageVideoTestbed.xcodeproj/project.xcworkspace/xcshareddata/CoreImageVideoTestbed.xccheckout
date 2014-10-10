@@ -12,6 +12,8 @@
 	<dict>
 		<key>173CE80B04ED909C004DCF9750AF6D0CF8730991</key>
 		<string>https://github.com/JoshuaSullivan/CoreImageVideoTestbed.git</string>
+		<key>FEB283877F235D8A33FA3E22F9B26BC64B24994C</key>
+		<string>https://github.com/JoshuaSullivan/CoreImageFilterEnumeration.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CoreImageVideoTestbed.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>173CE80B04ED909C004DCF9750AF6D0CF8730991</key>
 		<string>../..</string>
+		<key>FEB283877F235D8A33FA3E22F9B26BC64B24994C</key>
+		<string>../../../CoreImageFilterEnumeration/ios</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/JoshuaSullivan/CoreImageVideoTestbed.git</string>
@@ -33,6 +37,14 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>173CE80B04ED909C004DCF9750AF6D0CF8730991</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FEB283877F235D8A33FA3E22F9B26BC64B24994C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ios</string>
 		</dict>

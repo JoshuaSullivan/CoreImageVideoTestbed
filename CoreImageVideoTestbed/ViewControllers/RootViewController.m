@@ -9,8 +9,8 @@
 #import "RootViewController.h"
 #import "StatView.h"
 #import "NRDColorCubeHelper.h"
-#import "CIEGaussianBlur.h"
-#import "CIEColorCube.h"
+#import <CoreImageFilterEnumeration/CIEColorCube.h>
+#import <CoreImageFilterEnumeration/CIEGaussianBlur.h>
 
 @import GLKit;
 @import AVFoundation;

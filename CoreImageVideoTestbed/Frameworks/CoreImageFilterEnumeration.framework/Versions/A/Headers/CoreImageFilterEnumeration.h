@@ -1,0 +1,146 @@
+//
+//  CoreImageFilterEnumeration.h
+//  CoreImageFilterEnumeration
+//
+//  Created by Joshua Sullivan on 10/10/14.
+//  Copyright (c) 2014 Joshua Sullivan. All rights reserved.
+//
+
+@import Foundation;
+
+//! Project version number for CoreImageFilterEnumeration.
+FOUNDATION_EXPORT double CoreImageFilterEnumerationVersionNumber;
+
+//! Project version string for CoreImageFilterEnumeration.
+FOUNDATION_EXPORT const unsigned char CoreImageFilterEnumerationVersionString[];
+
+#import <CoreImageFilterEnumeration/Filters/CIEAccordionFoldTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAdditionCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAffineClamp.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAffineTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAffineTransform.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAreaHistogram.h>
+#import <CoreImageFilterEnumeration/Filters/CIEAztecCodeGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBarsSwipeTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBlendWithAlphaMask.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBlendWithMask.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBloom.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBumpDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEBumpDistortionLinear.h>
+#import <CoreImageFilterEnumeration/Filters/CIECheckerboardGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIECircleSplashDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIECircularScreen.h>
+#import <CoreImageFilterEnumeration/Filters/CIECode128BarcodeGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorBurnBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorClamp.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorControls.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorCrossPolynomial.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorCube.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorCubeWithColorSpace.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorDodgeBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorInvert.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorMap.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorMatrix.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorMonochrome.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorPolynomial.h>
+#import <CoreImageFilterEnumeration/Filters/CIEColorPosterize.h>
+#import <CoreImageFilterEnumeration/Filters/CIEConstantColorGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIEConvolution3X3.h>
+#import <CoreImageFilterEnumeration/Filters/CIEConvolution5X5.h>
+#import <CoreImageFilterEnumeration/Filters/CIEConvolution9Horizontal.h>
+#import <CoreImageFilterEnumeration/Filters/CIEConvolution9Vertical.h>
+#import <CoreImageFilterEnumeration/Filters/CIECopyMachineTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIECrop.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDarkenBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDifferenceBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDisintegrateWithMaskTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDissolveTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDivideBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEDotScreen.h>
+#import <CoreImageFilterEnumeration/Filters/CIEEightfoldReflectedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEExclusionBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEExposureAdjust.h>
+#import <CoreImageFilterEnumeration/Filters/CIEFalseColor.h>
+#import <CoreImageFilterEnumeration/Filters/CIEFlashTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEFourfoldReflectedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEFourfoldRotatedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEFourfoldTranslatedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGammaAdjust.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGaussianBlur.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGaussianGradient.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGlassDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGlideReflectedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEGloom.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHardLightBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHatchedScreen.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHighlightShadowAdjust.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHistogramDisplayFilter.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHoleDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHueAdjust.h>
+#import <CoreImageFilterEnumeration/Filters/CIEHueBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIELanczosScaleTransform.h>
+#import <CoreImageFilterEnumeration/Filters/CIELightenBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIELightTunnel.h>
+#import <CoreImageFilterEnumeration/Filters/CIELinearBurnBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIELinearDodgeBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIELinearGradient.h>
+#import <CoreImageFilterEnumeration/Filters/CIELinearToSRGBToneCurve.h>
+#import <CoreImageFilterEnumeration/Filters/CIELineScreen.h>
+#import <CoreImageFilterEnumeration/Filters/CIELuminosityBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMaskToAlpha.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMaximumComponent.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMaximumCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMinimumComponent.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMinimumCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIEModTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMultiplyBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEMultiplyCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIEOverlayBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPerspectiveCorrection.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPerspectiveTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPerspectiveTransform.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPerspectiveTransformWithExtent.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectChrome.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectFade.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectInstant.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectMono.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectNoir.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectProcess.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectTonal.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPhotoEffectTransfer.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPinchDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPinLightBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEPixellate.h>
+#import <CoreImageFilterEnumeration/Filters/CIEQRCodeGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIERadialGradient.h>
+#import <CoreImageFilterEnumeration/Filters/CIERandomGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIESaturationBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIEScreenBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIESepiaTone.h>
+#import <CoreImageFilterEnumeration/Filters/CIESharpenLuminance.h>
+#import <CoreImageFilterEnumeration/Filters/CIESixfoldReflectedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIESixfoldRotatedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIESmoothLinearGradient.h>
+#import <CoreImageFilterEnumeration/Filters/CIESoftLightBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIESourceAtopCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIESourceInCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIESourceOutCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIESourceOverCompositing.h>
+#import <CoreImageFilterEnumeration/Filters/CIESRGBToneCurveToLinear.h>
+#import <CoreImageFilterEnumeration/Filters/CIEStarShineGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIEStraightenFilter.h>
+#import <CoreImageFilterEnumeration/Filters/CIEStripesGenerator.h>
+#import <CoreImageFilterEnumeration/Filters/CIESubtractBlendMode.h>
+#import <CoreImageFilterEnumeration/Filters/CIESwipeTransition.h>
+#import <CoreImageFilterEnumeration/Filters/CIETemperatureAndTint.h>
+#import <CoreImageFilterEnumeration/Filters/CIEToneCurve.h>
+#import <CoreImageFilterEnumeration/Filters/CIETriangleKaleidoscope.h>
+#import <CoreImageFilterEnumeration/Filters/CIETwelvefoldReflectedTile.h>
+#import <CoreImageFilterEnumeration/Filters/CIETwirlDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEUnsharpMask.h>
+#import <CoreImageFilterEnumeration/Filters/CIEVibrance.h>
+#import <CoreImageFilterEnumeration/Filters/CIEVignette.h>
+#import <CoreImageFilterEnumeration/Filters/CIEVignetteEffect.h>
+#import <CoreImageFilterEnumeration/Filters/CIEVortexDistortion.h>
+#import <CoreImageFilterEnumeration/Filters/CIEWhitePointAdjust.h>
